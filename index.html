@@ -77,6 +77,14 @@
         .btn { font-size: .72rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; border: 1px solid var(--accent); color: var(--accent); border-radius: 4px; padding: 2px 8px; text-decoration: none; }
         .btn:hover { background: var(--accent); color: #fff; }
 
+        /* Talks */
+        .talk { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+        .talk:last-child { border-bottom: 0; }
+        .talk .what { font-weight: 600; }
+        .talk .where { color: var(--muted); font-size: .92rem; }
+        .kind { font-size: .72rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 1px 7px; margin-left: 6px; vertical-align: 2px; }
+        .svc li { margin-bottom: 4px; }
+
         /* Teaching */
         dl.teach dt { font-weight: 600; margin-top: 12px; }
         dl.teach dd { margin: 0 0 4px; color: var(--muted); }
@@ -102,11 +110,15 @@
             <a href="#about">About</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
+            <a href="#talks">Talks</a>
             <a href="#teaching">Teaching</a>
+            <a href="#service">Awards &amp; Service</a>
         </nav>
         <div class="links">
             <a href="Hank CV.pdf" target="_blank">CV</a>
             <a href="https://github.com/fluryh" target="_blank">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=YeJTyAMAAAAJ&amp;hl=en" target="_blank">Scholar</a>
+            <a href="https://orcid.org/0009-0004-1722-8607" target="_blank">ORCID</a>
             <a href="mailto:fluryh@uchicago.edu">Email</a>
         </div>
     </aside>
@@ -116,7 +128,7 @@
         <section id="about">
             <h1>Hank Flury</h1>
             <p class="sub">Postdoctoral Scholar, Department of Ecology and Evolution, University of Chicago<br />
-                Ph.D. in Statistics and Operations Research, UNC Chapel Hill<br />
+                Ph.D. in Statistics and Operations Research, University of North Carolina at Chapel Hill<br />
                 Zoology 409 &middot; <a href="mailto:fluryh@uchicago.edu">fluryh@uchicago.edu</a></p>
 
             <div class="tags">
@@ -128,7 +140,7 @@
             </div>
 
             <p>I develop statistical methods for data with strong dependence in space and time, with an emphasis on inference that is both theoretically grounded and computationally scalable. I am currently a postdoctoral scholar in the <a href="https://steinrueckenlab.uchicago.edu/" target="_blank">Steinruecken lab</a> in the department of <a href="https://ecologyandevolution.uchicago.edu/" target="_blank">Ecology and Evolution</a> at the University of Chicago, where I apply these tools to time series of ancient human genomes.</p>
-            <p>I received my Ph.D. in Statistics and Operations Research from the University of North Carolina in April 2025, and my undergraduate degree in Statistics with a minor in Mathematics from the University of Washington in March 2020. I've had a life-long love for statistics and mathematics. My goal is to continue publishing compelling research for as long as I am able and pass my enthusiasm for statistics to the next generation of researchers!</p>
+            <p>I received my Ph.D. in Statistics and Operations Research from the University of North Carolina in April 2025, and my undergraduate degree in Statistics with a minor in Mathematics from the University of Washington in March 2020. I'm drawn to problems where the difficulty lies in the dependence structure, and to modeling that dependence accurately and efficiently. I also enjoy teaching at every level, from serving as instructor of record for undergraduate courses at UNC to volunteering as an in-classroom math tutor at a Chicago high school.</p>
             <p><b>Skills:</b> R, Python (NumPy, Pandas), MATLAB &middot; MCMC, composite likelihood</p>
         </section>
 
@@ -195,6 +207,31 @@
             </div>
         </section>
 
+        <!-- Talks -->
+        <section id="talks">
+            <h2>Talks</h2>
+            <div class="talk">
+                <div class="year">2026</div>
+                <div><div class="what">Midwest Popgen<span class="kind">Contributed</span></div><div class="where">University of Chicago &middot; Chicago, August 2026</div></div>
+            </div>
+            <div class="talk">
+                <div class="year">2025</div>
+                <div><div class="what">Extreme Value Analysis Conference<span class="kind">Contributed</span></div><div class="where">University of North Carolina at Chapel Hill &middot; June 2025</div></div>
+            </div>
+            <div class="talk">
+                <div class="year">2023</div>
+                <div><div class="what">NKUA Statistics Seminar<span class="kind">Invited</span></div><div class="where">National and Kapodistrian University of Athens &middot; November 2023</div></div>
+            </div>
+            <div class="talk">
+                <div class="year">2023</div>
+                <div><div class="what">UNC STOR Graduate Student Seminar<span class="kind">Invited</span></div><div class="where">University of North Carolina at Chapel Hill &middot; August 2023</div></div>
+            </div>
+            <div class="talk">
+                <div class="year">2023</div>
+                <div><div class="what">Extreme Value Analysis Conference<span class="kind">Contributed</span></div><div class="where">Bocconi University &middot; Milan, June 2023</div></div>
+            </div>
+        </section>
+
         <!-- Teaching -->
         <section id="teaching">
             <h2>Teaching</h2>
@@ -207,6 +244,24 @@
                 <dt>Teaching Assistant</dt>
                 <dd>STOR 320 (Fall 2020, Summer I &amp; II 2022, Summer 2023) &middot; STOR 455 (Spring 2021) &middot; STOR 435 (Fall 2021) &middot; STOR 634/520 (Fall 2022)</dd>
             </dl>
+        </section>
+
+        <!-- Awards and Service -->
+        <section id="service">
+            <h2>Awards &amp; Service</h2>
+            <h3>Awards</h3>
+            <ul class="svc">
+                <li>Malcolm Ross Leadbetter Graduate Student Excellence Award, UNC Chapel Hill (2024)</li>
+            </ul>
+            <h3 style="margin-top:20px">Referee</h3>
+            <ul class="svc">
+                <li><i>Journal of the American Statistical Association</i></li>
+                <li><i>Annals of Applied Statistics</i></li>
+                <li><i>Statistical Inference for Stochastic Processes</i></li>
+                <li><i>Sankhya A &ndash; The Indian Journal of Statistics</i></li>
+                <li><i>Statistical Theory and Related Fields</i></li>
+                <li><i>Robust and Multivariate Statistical Methods (Festschrift volume)</i></li>
+            </ul>
         </section>
     </main>
 </div>
