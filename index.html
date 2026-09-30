@@ -62,15 +62,15 @@
                         <!--<a class="social-icon" href="https://scholar.google.com/citations?user=FaK160AAAAAJ&hl=en&oi=sra"><i class="ai ai-google-scholar"></i></a> -->
                         <a class="social-icon" href="Hank CV.pdf"><i class="ai ai-cv"></i></a>
 
-                         <p class="subheading mb-5"><subblack>Research Interests:</subblack> <subsmall>Extreme Value Theory, Spatial Statistics, Environmental applications of statistics</subsmall></p>
+                         <p class="subheading mb-5"><subblack>Research Interests:</subblack> <subsmall>Spatio-temporal statistics &middot; Dependence modeling &middot; Extreme value theory &middot; Bayesian and fiducial computation &middot; Applications in environmental science and population genetics</subsmall></p>
                     </div>
                     </div>
                     <h1 class="mb-1">
                         <p class="h2"> About  </p>
                     </h1>
-					<p class="lead mb-5"> I am a postdoctoral scholar in the <a href="https://steinrueckenlab.uchicago.edu/" target="_blank">Steinruecken lab</a> in the department of <a href="https://ecologyandevolution.uchicago.edu/" target="_blank">Ecology and Evolution</a> at the University of Chicago. 
-					My current research focuses on the estimation of selective advantage for polygenic traits and monogenic traits amid population structure in ancient humans.</p>
-					<p class="lead mb-5"> I received my Ph.D. in Statistics and Operations Research from the University of North Carolina in April 2025, and my undergraduate degree in Statistics with a minor in Mathematics from the University of Washington in March 2020. I've had a life-long love for statistics and mathematics. My goal is to continue publishing compelling research for as long as I am able and pass my enthusiasm for statistics to the next generation of researchers!
+					<p class="lead mb-5"> I develop statistical methods for data with strong dependence in space and time, with an emphasis on inference that is both theoretically grounded and computationally scalable. I am currently a postdoctoral scholar in the <a href="https://steinrueckenlab.uchicago.edu/" target="_blank">Steinruecken lab</a> in the department of <a href="https://ecologyandevolution.uchicago.edu/" target="_blank">Ecology and Evolution</a> at the University of Chicago, where I apply these tools to time series of ancient human genomes.</p>
+					<p class="lead mb-5"> I received my Ph.D. in Statistics and Operations Research from the University of North Carolina in April 2025, and my undergraduate degree in Statistics with a minor in Mathematics from the University of Washington in March 2020. I've had a life-long love for statistics and mathematics. My goal is to continue publishing compelling research for as long as I am able and pass my enthusiasm for statistics to the next generation of researchers!</p>
+					<p class="lead mb-5"><b>Skills:</b> R, Python (NumPy, Pandas, msprime), MATLAB &middot; MCMC, composite likelihood, integer programming</p>
 
                 </div>
             </section>
@@ -80,15 +80,24 @@
             <section class="resume-section" id="research">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Research</h2>
-                    <p class="lead mb-5"> My current work can be split into two related projects. The first project constitutes a new application for the theme of spatial statistics which ran throughout my Ph.D. work. I aim to create the first method for estimating the selective advantage of genetic variance at a single locus which allows for the inclusion of population structures
-                        with migration between subpopulations. I am emphasizing both accuracy and computational feasibility in these methods, as we find novel ways to extend the methods of the single population setting to our more flexible regime. Concurrently, I am working on a method which strives to infer selective advantage in polygenic traits.
-                        Though the dynamics of polygenic traits are complex, I aim to create a method which can accurately infer selective advantage while accounting for both directional and stabilizing selection. For both of these projects, I aim to apply the method to time series data of ancient human genomes to identify novel loci/traits which have been
-                        under selective pressure.
-                    </p> 
-
-                    <p class="lead mb-5"> The primary research of my Ph.D. was in extreme value theory, the study of events in the tails of distributions and order statistics. Spurred by a passion for the outdoors, my work focused on theoretical analysis of multivariate spatial applications of EVT, such as models used to describe extreme heat waves
-			    or rainfall events. More specifically, my work has focused on quantifying the bias imposed by the block maxima method, a common sampling scheme in EVT, and developing methods to efficiently estimate the dependence parameters at multiple sites in a spatial region. With my Ph.D. work as a base, I plan to return to EVT, both in the capacity
-                of developing novel statistical theory, and applying cutting-edge techniques to real-world environmental applications.</p> 
+                    <div class="mb-5">
+                        <h3 class="mb-2">Dependent time series in structured populations</h3>
+                        <p class="lead">Estimating selection from allele-frequency time series across subpopulations linked by migration, with a focus on scalable computation.</p>
+                        <p>Natural selection leaves a signature in how allele frequencies change over time, and ancient DNA provides direct time series of those frequencies. Methods for estimating selective advantage are largely built for a single, well-mixed population. I aim to develop the first method for estimating selection at a single locus that allows for population structure with migration between subpopulations (in effect, a spatially structured time series), while keeping inference both accurate and computationally feasible as the model grows.</p>
+                        <p>In parallel, I am developing a method for inferring selection on polygenic traits that accounts for both directional and stabilizing selection. For both projects, the goal is to apply the methods to time series of ancient human genomes to identify loci and traits that have been under selective pressure.</p>
+                    </div>
+                    <div class="mb-5">
+                        <h3 class="mb-2">Spatial extremes</h3>
+                        <p class="lead">Asymptotic theory for block-maxima estimation of the H&uuml;sler-Reiss model, with applications to heat waves and extreme rainfall.</p>
+                        <p>Extreme value theory models the tails of distributions: the heat waves and rainfall events that drive environmental risk. The H&uuml;sler-Reiss distribution is a standard model for the dependence among extremes observed at multiple sites, and it is commonly fit with the block maxima method, which keeps only the largest observation in each block (for example, each year). My work quantifies the bias this sampling scheme introduces and develops theory for efficiently estimating the dependence parameters across a spatial region.</p>
+                        <p><i>H. Flury, J. Hannig, R. Smith. <a href="https://doi.org/10.1007/s10687-026-00535-w" target="_blank">Extremes</a>, 2026.</i></p>
+                    </div>
+                    <div class="mb-5">
+                        <h3 class="mb-2">Inference for Gaussian processes</h3>
+                        <p class="lead">Fiducial MCMC for time series and spatial covariance models, with composite likelihood for scalability.</p>
+                        <p>Many time series and spatial models are Gaussian, with all of the structure living in the covariance matrix. Fiducial inference yields a posterior-like distribution without requiring a prior. We developed a fiducial MCMC method that handles non-independent, non-identically distributed data by using the Cayley transform to parameterize the covariance decomposition; the user only needs to supply the covariance function and its derivatives. We demonstrate it on MA(1) and Mat&eacute;rn models, and a composite-likelihood variant cuts runtime from over three hours to about three minutes with comparable estimation quality.</p>
+                        <p><i>H. Flury, J. Hannig, R. Smith. <a href="https://doi.org/10.1111/jtsa.70054" target="_blank">Journal of Time Series Analysis</a>, 2026.</i></p>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
